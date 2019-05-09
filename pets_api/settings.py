@@ -130,4 +130,10 @@ STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
     'URL_FIELD_NAME': 'resource_uri',
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
 }
